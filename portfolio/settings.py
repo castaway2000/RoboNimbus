@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
+# SECURITY WARNING: keep the secret key used in production secret! #change for production.
 SECRET_KEY = '*l6-j(@8uj0^3irs5q@e#7m-#ru#(wni+g_9&fzzjek2*(-=ir'
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -145,7 +145,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "static", "media")
 
 
-RECAPTCHA_PUBLIC_KEY = '6LeZYs4UY'
+RECAPTCHA_PUBLIC_KEY = '6LeZYs4UY' #change on prod
 RECAPTCHA_PRIVATE_KEY = '6LeZYs4UA'
 
 BLOG_PAGE_SIZE = 10
