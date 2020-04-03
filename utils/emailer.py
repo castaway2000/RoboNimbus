@@ -2,14 +2,14 @@ import boto3
 
 
 def send_email(sender_email, sender_name, message, phone):
-    client = boto3.client('ses', region='us-west-2')
+    client = boto3.client('ses', region_name='us-west-2')
 
     response = client.send_email(
-        Source='string',
+        Source='szablya@gmail.com',
         Destination={
-            'ToAddresses': [
-                'me@gmail.com',
-            ]
+            'ToAddresses': ['szablya@gmail.com'],
+            'CcAddresses': [],
+            'BccAddresses': []
         },
         Message={
             'Subject': {

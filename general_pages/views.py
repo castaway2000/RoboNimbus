@@ -1,11 +1,13 @@
 from datetime import datetime
 
 from django.views import generic
+
+from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 from portfolio import settings
 
-from .forms import ContactUsForm, TopContactUsForm
-from .models import ContactUs, TermsPolicy
+from .forms import TopContactUsForm
+from .models import TermsPolicy
 from blog.models import BlogPost
 from utils.emailer import send_email
 
@@ -25,16 +27,12 @@ class HomeView(generic.CreateView):
         context['year'] = datetime.now().year
         return context
 
-    def form_valid(self, form):
-        client_email = send_email(form.email, form.name, form.message, form.phone)
-        if client_email:
-            message = client_email['MessageId']
-            notes = ContactUs.objects.get(email=form.email)
-            notes['email_sent'] = message
-            notes.save(commit=True)
-        return super().form_valid(form)
-
-
+    def post(self, request, *args, **kwargs):
+        form = TopContactUsForm(request.POST)
+        data = request.POST.copy()
+        print(data['email'])
+        send_email(data['email'], data['name'], data['message'], data['phone'])
+        return HttpResponseRedirect('/')
 
 
 class TosView(generic.TemplateView):
