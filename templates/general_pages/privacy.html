@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+ {% block seo_stuff %}
+    <title>Discover how we help protect your privacy and property | RoboNimbus</title>
+    <meta name="description" content="Using AWS I help small businesses save money by helping manage their
+    cloud environments, train owners and employees, review architetcure, find security vilnerabilties, build software, and manage web services and
+    a price that fits their budget.">
+
+    <meta property="og:title" content="Small Business AWS DevOps consultant and support" />
+    <meta property="og:url" content="{{ request.build_absolute_uri }}" />
+    <meta property="og:image" content="{% if request.is_secure %}https://{% else %}http://{% endif %}{{ request.get_host }}{% static 'img/portfolio/robonimbus.png' %}" />
+    <meta property="og:description" content="Using AWS I help small businesses save money by helping manage their
+    cloud environments, train owners and employees, review architetcure, find security vilnerabilties, build software, and manage web services and
+    a price that fits their budget.">
+
+    <meta property="og:type" content="website" />
+    <script type="application/ld+json">
+    {
+       "@context": "http://schema.org",
+       "@type": "Organization",
+       "name": "RoboNimbus",
+       "url": "https://www.robonimbus.com/",
+       "logo": "{% if request.is_secure %}https://{% else %}http://{% endif %}{{ request.get_host }}{% static 'img/portfolio/robonimbus.png' %}",
+       "contactPoint": [
+           {
+               "@type": "ContactPoint",
+               "telephone": "+1(844)8433815",
+               "contactType": "sales",
+               "email": "contactus@robonimbus.com",
+               "areaServed": [
+                   "USA"
+               ],
+               "availableLanguage": [
+                   "English"
+               ]
+           }
+       ],
+       "sameAs": [
+           "https://www.linkedin.com/in/adam-szablya-a0b41b8a/",
+       ]
+    }
+    </script>
+    {% endblock seo_stuff %}
+
+{% block content %}
+{{ privacy.text | safe }}
+{% endblock %}
+{#{% include 'footer.html' %}#}

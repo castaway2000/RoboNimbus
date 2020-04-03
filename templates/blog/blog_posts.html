@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block seo_Stuff %}
+    <title>Read up on how we are helping small businesses with AWS. | RoboNimbus</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Read the latest in AWS small business support solutions as I work with small
+    businesses to help the msave money and grow their business using cloud services.">
+    <meta name="author" content="RoboNimbus">
+
+    <meta property="og:title" content="Read up on how we are helping small businesses with AWS. | RoboNimbus" />
+    <meta property="og:url" content="{{ request.build_absolute_uri }}" />
+    <meta property="og:image" content="https://{{ request.get_host }}{% static 'img/portfolio/robonimbus.png' %}" />
+    <meta property="og:description" content="Read the latest in AWS small business support solutions as I work with small
+    businesses to help the msave money and grow their business using cloud services.">
+    <meta property="og:type" content="website" />
+{% endblock %}
+
+{% block content %}
+      <section class="slice slice-sm bg-section-secondary" style="background-image: {% static 'img/header-bg2.jpg' %}">
+        <div class="container" style="background-image: {% static 'img/header-bg2.jpg' %}">
+          <div class="mb-1 text-center">
+            <h1 class="mt-2">The RoboNimbus Blog</h1>
+          </div>
+        </div>
+      </section>
+            <div class="container">
+             {% for blog_post in object_list %}
+              <div class="row row-grid align-items-center">
+                <div class="col-lg-5 order-lg-2 ml-lg-auto">
+                  <small class="text-muted text-uppercase ls-1">{{ blog_post.created|date:"d M, Y" }}</small>
+                  <h3 class="mt-2">{{ blog_post.title }}</h3>
+                  <p class="lead mt-4">{{ blog_post.preview_text|safe }}</p>
+                  <a href="{% url 'blog_post' blog_post.slug %}"
+                     class="btn btn-dark btn-icon rounded-pill hover-scale-110 mt-4">
+                    <span class="btn-inner--text">Read more</span>
+                    <span class="btn-inner--icon">
+                      <i class="fas fa-angle-right"></i>
+                    </span>
+                  </a>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                  <img alt="{{ blog_post.title }} image" src="{{ blog_post.image_medium.url }}"
+                       class="img-fluid rounded shadow-lg hover-translate-y-n3">
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+{% endblock content %}

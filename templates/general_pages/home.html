@@ -1,0 +1,765 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+ {% block seo_stuff %}
+    <title>Small Business AWS consultant and Support | RoboNimbus</title>
+    <meta name="description" content="Using AWS I help small businesses save money by helping manage their
+    cloud environments, train owners and employees, review architetcure, find security vilnerabilties, build software, and manage web services and
+    a price that fits their budget.">
+
+    <meta property="og:title" content="Small Business AWS DevOps consultant and support" />
+    <meta property="og:url" content="{{ request.build_absolute_uri }}" />
+    <meta property="og:image" content="{% if request.is_secure %}https://{% else %}http://{% endif %}{{ request.get_host }}{% static 'img/portfolio/robonimbus.png' %}" />
+    <meta property="og:description" content="Using AWS I help small businesses save money by helping manage their
+    cloud environments, train owners and employees, review architetcure, find security vilnerabilties, build software, and manage web services and
+    a price that fits their budget.">
+
+    <meta property="og:type" content="website" />
+    <script type="application/ld+json">
+    {
+       "@context": "http://schema.org",
+       "@type": "Organization",
+       "name": "RoboNimbus",
+       "url": "https://www.robonimbus.com/",
+       "logo": "{% if request.is_secure %}https://{% else %}http://{% endif %}{{ request.get_host }}{% static 'img/portfolio/robonimbus.png' %}",
+       "contactPoint": [
+           {
+               "@type": "ContactPoint",
+               "telephone": "+1(844)8433815",
+               "contactType": "sales",
+               "email": "contactus@robonimbus.com",
+               "areaServed": [
+                   "USA"
+               ],
+               "availableLanguage": [
+                   "English"
+               ]
+           }
+       ],
+       "sameAs": [
+           "https://www.linkedin.com/in/adam-szablya-a0b41b8a/",
+       ]
+    }
+    </script>
+ {% endblock seo_stuff %}
+
+{% block content %}
+ <!-- Header -->
+    <header class="masthead">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1"></div>
+                    <div class="col-md-3">
+                        <div class="intro-text">
+                            <div>
+                                {# for some reason the background image is in the css #}
+                                <h1 class="intro-lead-in">Welcome!</h1>
+                                <div class="text-uppercase">
+                                    My name is Adam, I provide managed cloud solutions and services for small businesses at an affordable price.
+                                </div>
+                                <br/>
+                                <a class="btn btn-primary btn-md text-uppercase js-scroll-trigger" href="#services">See
+                                    What I Can Do</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="intro-form">
+                        {% crispy form %}
+                    </div>
+            </div>
+        </div>
+    </header>
+
+  <!-- Services -->
+  <section class="page-section" id="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Services</h2>
+          <h3 class="section-subheading text-muted">Below is a small list of services I can do for you and your business.</h3>
+        </div>
+      </div>
+
+      <div class="row text-center">
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+            <i class="fa fa-cloud fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">AWS Managed Services</h4>
+          <p class="text-muted">I specialize in AWS management and can help you with a hands on approach to the administrative aspect of running AWS environment.</p>
+        </div>
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+            <i class="fa fa-dollar-sign fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">Cost Optimization</h4>
+          <p class="text-muted">With my vast experience in AWS and architectural design I have found all the little ways I can to save you and your businesses money.</p>
+        </div>
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+            <i class="fa fa-shield-alt fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">Cloud Security Audit</h4>
+          <p class="text-muted">Through a comprehensive approach, I will be able to rapidly identify security vulnerabilities within your environment and work with you to patch them.</p>
+        </div>
+        </div>
+            <!-- second line -->
+      <div class="row text-center">
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+            <i class="fa fa-sync fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">Automation Solutions</h4>
+          <p class="text-muted">My extensive experience with Python, Boto3, Troposphere, CloudFormation, Ansible and Terraform I can rapidly develop custom and pre-made automation solutions for your team</p>
+        </div>
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+            <i class="fa fa-pencil-ruler fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">Well Architected Reviews</h4>
+          <p class="text-muted">Well Architected reviews are a key step in ensureing that your services will grow with you in a sustainable and secure way. I have done many of these for other clients and can do this for you.</p>
+        </div>
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+            <i class="fa fa-cubes fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">Custom Cloud Architecture</h4>
+          <p class="text-muted">Are you needing a new service deployed and want to make sure its done right? Give me the project specifications and I will work to develop the architecture from diagrams to deployment.</p>
+        </div>
+      </div>
+      <!-- Third line -->
+       <div class="row text-center">
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+            <i class="fa fa-laptop-code fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">Wed Development and Administration</h4>
+          <p class="text-muted">With my specialty in Python and Django I can rapidly build and deploy websites for your business that are easy for you to maintain or I can help you maintain your new or current webservices no matter the tech stack.</p>
+        </div>
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+            <i class="fa fa-database fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">Database Administration</h4>
+          <p class="text-muted">Do you have an RDS service? MySQL or Postgres? Do you need someone to maintain the stability of the database? I can also help your business with this as well.</p>
+        </div>
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+            <i class="fa fa-code fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">Software Development</h4>
+          <p class="text-muted">Do you require lower level scripts or Rest API's or other internal business software tools? My Experience in Python, BaSH, Javascript and Java  will allow me to assist you and your business.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Grid -->
+  <section class="bg-light page-section" id="portfolio">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Portfolio</h2>
+          <h3 class="section-subheading text-muted">I feel that business owners best understand other business owners,
+              I have started three companies on my own. Below you can see what was involved from building it from the ground up.</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-sm-6 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fa fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="{% static 'img/portfolio/Tourzan.png'%}" alt="thumbail">
+          </a>
+          <div class="portfolio-caption">
+            <h4>Tourzan.com</h4>
+            <p class="text-muted">Tourguide Marketplace Platform</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fa fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="{% static 'img/portfolio/Metrolla.png'%}" alt="thumbail2">
+          </a>
+          <div class="portfolio-caption">
+            <h4>Metrolla.com</h4>
+            <p class="text-muted">Self-Driving Vehicle Communication</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fa fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="{% static 'img/portfolio/robonimbus.png'%}" alt="thumbail3">
+          </a>
+          <div class="portfolio-caption">
+            <h4>RoboNimbus.com</h4>
+            <p class="text-muted">This Website</p>
+          </div>
+        </div>
+
+          <div class="col-md-2 col-sm-4 portfolio-item">
+        </div>
+         <div class="col-md-4 col-sm-6 portfolio-item">
+             <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fa fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="{% static 'img/portfolio/stratus10.png'%}" alt="thumbail4">
+          </a>
+          <div class="portfolio-caption">
+            <h4>Stratus10.com</h4>
+            <p class="text-muted">CICD Pipeline and Client services</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fa fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="{% static 'img/portfolio/saepio.png'%}" alt="thumbail5">
+          </a>
+          <div class="portfolio-caption">
+            <h4>Saep.io</h4>
+            <p class="text-muted">Build a client Analytics Dashboard</p>
+          </div>
+        </div>
+          <div class="col-md-1 col-sm-3 portfolio-item">
+        </div>
+
+        <div class="col-md-4 col-sm-6 portfolio-item">
+        </div>
+        <div class="col-md-4 col-sm-6 portfolio-item">
+          <a class="portfolio-link" href="https://www.github.com/castaway2000" rel="nofollow noopener noreferrer" target="_blank">
+{#             data-toggle="modal" href="#portfolioModal5">#}
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fa fa-link fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="{% static 'img/portfolio/github.png' %}" alt="thumbail5">
+          </a>
+          <div class="portfolio-caption">
+            <h4>My Github Repo</h4>
+            <p class="text-muted">Open source code projects and useful tools I use</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 portfolio-item">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="page-section" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">About</h2>
+          <h3 class="section-subheading text-muted">My life is more than just a job, it is about the experience of helping others.</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <ul class="timeline">
+            <li>
+              <div class="timeline-image">
+                <img class="rounded-circle img-fluid" src="{%static 'img/about/googlelogo.png'%}" alt="Google G Logo">
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4>January 2014</h4>
+                  <h4 class="subheading">My jump into technology</h4>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted">I jump-started my career at Google
+                      where I worked to support the Maps teams by deploy free open-source resource monitoring solutions
+                      across 3 countries and 4 offices. The intent was to help us determine what needed to be replaced
+                      when doing upgrades on the computers. The Zabbix deployment resulted in saving $2Million on machine replacement.</p>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-inverted">
+              <div class="timeline-image" style="background-color: crimson">
+                <img class="rounded-circle img-fluid" src="{%static 'img/about/F5.png'%}" alt="F5 Networks Logo">
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4>June 2015</h4>
+                  <h4 class="subheading">Becoming a Founder and DevOps Specialist</h4>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted">
+                      Arriving at F5 Networks I joined the Virtual Edition BigIP Network Load Balancer Test Automation Team working
+                      to build a lot of network traffic related test scripts. Eventually We were charged with the push into cloud services.
+                      I was tasked to do the cloud service provider evaluation for over 30 cloud service providers. This is where I fell in love with AWS.
+                      This Dropped me out of coding wich was my first love in Tech and I started to build Tourzan.com to
+                      keep me fresh while I learned this new career path called DevOps.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="timeline-image">
+                <img class="rounded-circle img-fluid" src="{% static 'img/about/tourzan.png'%}" alt="Tourzan.com Logo">
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4>November 2015</h4>
+                  <h4 class="subheading">Tourzan.com</h4>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted">
+                      While continuing to work for F5 Networks I built up Tourzan.com from zero locations to over 400 cities served.
+                      My company allowed me outlet my passion for software by building production grade API's, drop in UI's,
+                      Understand how other business models work like AirBnB, Uber and more. I was able to build something on my other passion,
+                      International Travel. Sales and marketing became very difficult for me to Manage until I met a
+                      business partner who helped me realize we all need help sometimes.
+                      Tourzan runs entirely as a remote entity within AWS and has been hand built by a team I put together and manage.
+                      Sadly, It still did't not make enough for me to quit my day job.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-inverted">
+              <div class="timeline-image">
+                <img class="rounded-circle img-fluid" src="{% static 'img/about/KW.png'%}" alt="PACCAR Logo">
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4>June 2018</h4>
+                  <h4 class="subheading">PACCAR and Self Driving Technology</h4>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted">
+                      Working for PACCAR has been a nice break from the tech industry vibe. I was put on a few really
+                      cool projects that have my interest. Notably a custom implementation with an F5 Load balancer and a custom script for our Tableau Cluster
+                      that saves the company over $400,000 annually. Though for the majority of my tenure here
+                      I was in charge of networking and data offload on their Self-Driving Semi Truck. My code
+                      contributions, local and global network configurations are part of a
+                      future global offering that will have a major impact on supply lines and more. This got my mind
+                      wondering about other parts of self-driving vehicles and I realized that not many in
+                      logistics were working on vehicle communication systems.
+                      After getting permission to persue this on my own I started Metrolla.com
+                  </p>
+                </div>
+              </div>
+            </li>
+               <li>
+              <div class="timeline-image">
+                <img class="rounded-circle img-fluid" src="{% static 'img/about/Metrolla.png'%}" alt="Metrolla.com Logo">
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4>November 2019</h4>
+                  <h4 class="subheading">Metrolla.com</h4>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted">
+                      Metrolla.com allowed me to flex my muscles in network technology,
+                      let me use my experience with PACCAR, and give me more hands on experience with
+                      hardware and cloud based decentralized scalability.
+                      I decided I wanted the devices to be auto provisioning, hyper accurate,
+                      allow for streaming of other on board sensors, act as a redundant system for other sensors.
+                      Most importantly of all it needed to run on existing technology and be scalable on that technology.
+
+                      And it did all of that and more. I am working to build out the sales teams at this time to start getting partners to implement it.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-inverted">
+              <div class="timeline-image">
+                <img class="rounded-circle img-fluid" src="{% static 'img/about/1.jpg'%}" alt="PACCAR Logo">
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4>August 2018</h4>
+                  <h4 class="subheading">Stratus10 and the birth of RobotNimbus.com</h4>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted">In 2018 i was contacted by Oscar Moncada who with his co-founder run Stratus10.com
+                      a full shop for managed AWS. Oscar hired me to subcontract for them while they grew their business.
+                      I figured this would be a good opportunity for some extra fun money and for me to learn more about
+                      the management side of consulting work. This had me thinking about how many out there need managed
+                      services but really cant afford it because they are just too small.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-inverted">
+              <div class="timeline-image" style="background-color: #fed136;">
+                <h4>Lets<br>
+                    Share a<br>
+                    Story!
+                </h4>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="bg-light page-section" id="team">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">The Talent.</h2>
+          <h3 class="section-subheading text-muted">Hello and thank you for taking the time to checkout what I can do for you.
+              I firmly believe in being open, transparent and honest which is why its nice to put a face to the name.
+          </h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="team-member">
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="{% static 'img/team/adam.jpg'%}" alt="">
+            <h4>Adam Szablya</h4>
+            <p class="text-muted">The Consultant and DevOps Engineer</p>
+            <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="team-member">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          <p class="large text-muted">It has been said that the only stupid question is the one you dont ask.
+              Talk is cheap as they say, action is gold. Lets connect on LinkedIn.
+              Feel free to ask me anything and I will do my best to answer your questions for free, and
+              if you need me to do work for you we can work something out that fits within your contsraints.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clients -->
+  <section class="py-5" style="background-color: lightslategrey" id="clients">
+    <div class="container">
+      <div class="row">
+          <div class="col-lg-12 text-center">
+            <h3 class="section-heading text-uppercase">Clients</h3>
+          </div>
+        <div class="col-md-4 col-sm-8">
+          <a href="https://www.stratus10.com" rel="nofollow noopener noreferrer" target="_blank">
+            <img class="img-fluid d-block mx-auto" src="{% static 'img/logos/stratus10_logo.png' %}" alt="">
+          </a>
+        </div>
+{#          <div class="col-md-1 col-sm-1">#}
+{#          </div>#}
+        <div class="col-md-4 col-sm-8">
+          <a href="https://www.saep.io" rel="nofollow noopener noreferrer" target="_blank">
+            <img class="img-fluid d-block mx-auto" src="{% static 'img/logos/saep.png' %}" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+      <!-- Partners -->
+  <section class="py-5" style="background-color: dimgrey" id="partners">
+    <div class="container">
+      <div class="row">
+          <div class="col-lg-12 text-center">
+            <h3 class="section-heading text-uppercase">Partners</h3>
+              <p>Are you looking to bring in new clients? I am looking to partner with the right people.
+                  Do you have the right stuff? <a href="#contact">Contact me.</a></p>
+          </div>
+
+        <div class="col-md-4 col-sm-8">
+        </div>
+          <div class="col-md-4 col-sm-8">
+          <a href="https://www.stratus10.com" rel="nofollow noopener noreferrer" target="_blank">
+            <img class="img-fluid d-block mx-auto" src="{% static 'img/logos/stratus10_logo.png' %}" alt="">
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-8">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="page-section" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Contact Me</h2>
+          <h4 class="section-heading">I am taking on new clients and would love to give you a
+              free one on one to talk about your businesses needs. Let me know about your project in the form below.</h4>
+            <br/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+            {% crispy form %}s
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- BLOG -->
+  <section class="py-5" style="background-color: darkslategrey">
+    <div class="container">
+        <div class="row">
+        <div class="col-lg-12 text-center">
+            <h3 class="section-heading text-uppercase">Latest News</h3>
+        </div>
+            {% for blog_post in object_featured_list %}
+                <div class="col-lg-4">
+                  <div class="card hover-shadow-lg hover-translate-y-n10">
+                    <a href="{% url 'blog_post' blog_post.slug %}">
+                      <img alt="{{ blog_post.title }} image" src="{{ blog_post.image_small.url }}" class="card-img-top">
+                    </a>
+                    <div class="card-body py-5 text-center">
+                      <a href="{% url 'blog_post' blog_post.slug %}" class="d-block h5 lh-150">{{ blog_post.title }}</a>
+                      <h6 class="text-muted mt-4 mb-0">{{ blog_post.created|date:"d M, Y" }}</h6>
+                    </div>
+                  </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Modals -->
+
+  <!-- Modal 1 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="modal-body">
+                <!-- Project Details Go Here -->
+                <h2 class="text-uppercase">Tourzan.com</h2>
+                <p class="item-intro text-muted">Build a platform that allows locals to make side cash showing people around where they live.</p>
+                <img class="img-fluid d-block mx-auto" src="{% static 'img/portfolio/Tourzan.png' %}" alt="">
+                <p>The website started as a way for me to continue to code while going through a major change in my career.
+                I decided to take my passion for travel and found that there was an entire segment lacking in the
+                    tourism industry for Airbnb like services. Tourzan.com filled that need.
+                    Tourzan features a full two sided web marketplace with global payouts to 220 countries,
+                    Secure integration API's for 3rd parties, white labeled drop in UI's for 3rd party integrations,
+                    a commissioned mobile app, global centralized distribution through my own AWS Architecture, real time chat system for communication,
+                    Full translation of the site in 6 different languages, and is servicing 112+ countries and 400+ Cities.
+                    It was my first forey into business and startups and i built it from nothing to where it is single handedly.
+                    It taught me a lot and it put me on the path I am today.</p>
+                <ul class="list-inline">
+                  <li>Date: November 2015</li>
+                  <li>Client: Saber Applications Inc.</li>
+                  <li>Category: Full Service Engineering and Management</li>
+                </ul>
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fa fa-times"></i>
+                  Close Project</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="modal-body">
+                <!-- Project Details Go Here -->
+                <h2 class="text-uppercase">Metrolla.com</h2>
+                <p class="item-intro text-muted">Give a voice to autonomous vehicles with existing tech.</p>
+                <img class="img-fluid d-block mx-auto" src="{% static 'img/portfolio/Metrolla.png' %}" alt="">
+                <p>After realizing the lack of communication services within the logistics segment of autonomous vehicles,
+                    I decided to challenge myself to build a SaaS for RnD Startups and Customers of Self driving delivery vehicles.
+                    The concept was simple, use existing widely implemented technology like sockets, REST API's and
+                    build a small form factor device that could piggy back on other services on the vehicle.
+                    While I was working on it, I realized this could also work as a tracking solution and alternate data hub.
+                    Eventually it became clear that the small device could be a simple backup and full service asset
+                    solution for large companies. With a few emails I managed to get myself test data from sensor providers
+                    and started building out the processes to stream Lidar and video from the vehicles right to my desktop.
+                    This solidified my platform as the only service that can do this.
+                </p>
+                <ul class="list-inline">
+                  <li>Date: November 2019</li>
+                  <li>Client: Metrolla.com</li>
+                  <li>Category: Full service development and engineering</li>
+                </ul>
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fa fa-times"></i>
+                  Close Project</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="modal-body">
+                <!-- Project Details Go Here -->
+                <h2 class="text-uppercase">RoboNimbus.com</h2>
+                <p class="item-intro text-muted">Complete personal portfolio website</p>
+                <img class="img-fluid d-block mx-auto" src="{% static 'img/portfolio/robonimbus.png' %}" alt="">
+                <p>I decided that after a very long time it was time I made my own personal website to showcase what I
+                    have been doing with my skills and career. I build this to serve two purposes, point people to a
+                    focused collection of information and to help me bring on new clients in my subcontracting.
+                    This was built with the idea of low cost with maximum effect in mind. I built this website with
+                    Python and Django using free single page application designed bootstrap templates for the user
+                    interface designs over the course of 3 days, this website took about 12 hours to put together.</p>
+                <ul class="list-inline">
+                  <li>Date: March 2020</li>
+                  <li>Client: My self</li>
+                  <li>Category: Website Development and Administration</li>
+                </ul>
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fa fa-times"></i>
+                  Close Project</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 4 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="modal-body">
+                <!-- Project Details Go Here -->
+                <h2 class="text-uppercase">Stratus10 website production CICD pipeline</h2>
+                <p class="item-intro text-muted">Tasked with building and managing their production CICD pipelines for their Drupal site.</p>
+                <img class="img-fluid d-block mx-auto" src="{% static 'img/portfolio/stratus10.png' %}" alt="">
+                <p>Stratus10 is a full service AWS solutions shop for small to medium businesses.
+                    Along with subcontracting for them as a client of mine to assist their customers, I was tasked with
+                    managing their internal devops services including cloud formation deployments all the way to their
+                    production CICD pipelines.</p>
+                <ul class="list-inline">
+                  <li>Date: August 2018</li>
+                  <li>Client: Stratus10</li>
+                  <li>Category: DevOps as a Service.</li>
+                </ul>
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fa fa-times"></i>
+                  Close Project</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 5 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="modal-body">
+                <!-- Project Details Go Here -->
+                <h2 class="text-uppercase">Saep.io Cloud Security Analytics Dashboard</h2>
+                <p class="item-intro text-muted">Build a dashboard that hooks into AWS, Azure and Google Cloud</p>
+                <img class="img-fluid d-block mx-auto" src="{% static 'img/portfolio/saepio.png' %}" alt="saep.io screeenshop">
+                <p>I was contracted to build an Analytics dashboard that allowed the continuous monitoring of security
+                    vulnerabilities that Saepio's services remediate. The continuous improvement to the dashboard would
+                    eventually allow for automatic remediation with their proprietary software and allow clients to
+                    visualize their environments state. It is being built as a value added service to existing customers</p>
+                <ul class="list-inline">
+                  <li>Date: January 2020 (In progress)</li>
+                  <li>Client: Saepio</li>
+                  <li>Category: Dashboard</li>
+                </ul>
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fa fa-times"></i>
+                  Close Project</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

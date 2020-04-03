@@ -1,0 +1,14 @@
+AUTHORS.rst
+ChangeLog.rst
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+crequest/__init__.py
+crequest/middleware.py
+django_crequest.egg-info/PKG-INFO
+django_crequest.egg-info/SOURCES.txt
+django_crequest.egg-info/dependency_links.txt
+django_crequest.egg-info/requires.txt
+django_crequest.egg-info/top_level.txt
