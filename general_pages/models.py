@@ -1,11 +1,12 @@
 from django.db import models
 import uuid
+from phonenumber_field.modelfields import PhoneNumberField
 
 
 class ContactUs(models.Model):
     name = models.CharField(max_length=128)
     email = models.EmailField()
-    phone = models.CharField(max_length=20, default=None, null=True)
+    phone = PhoneNumberField(default=None, null=True, unique=True)
     message = models.TextField()
     email_sent = models.TextField(default=None, null=True)
     is_processed = models.BooleanField(default=False)

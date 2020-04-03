@@ -7,7 +7,7 @@ from django.urls import reverse_lazy
 from portfolio import settings
 
 from .forms import TopContactUsForm
-from .models import TermsPolicy
+from .models import TermsPolicy, ContactUs
 from blog.models import BlogPost
 from utils.emailer import send_email
 
@@ -16,10 +16,7 @@ class HomeView(generic.CreateView):
     template_name = 'general_pages/home.html'
     form_class = TopContactUsForm
     success_url = reverse_lazy("home")
-    model = BlogPost
-    queryset = BlogPost.objects.all_published()
-    paginate_by = settings.BLOG_PAGE_SIZE
-    ordering = ["-order_index"]
+    model = ContactUs
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data()
@@ -27,11 +24,19 @@ class HomeView(generic.CreateView):
         context['year'] = datetime.now().year
         return context
 
-    def post(self, request, *args, **kwargs):
-        form = TopContactUsForm(request.POST)
-        data = request.POST.copy()
-        print(data['email'])
+    def form_valid(self, form):
+        # This method is called when valid form data has been POSTed.
+        # It should return an HttpResponse.
+        data = self.request.POST
+        form.save(commit=True)
+        print(data['email'], data['name'], data['message'], data['phone'])
         send_email(data['email'], data['name'], data['message'], data['phone'])
+        return HttpResponseRedirect('/')
+
+    def form_invalid(self, form):
+        # This method is called when invalid form data has been POSTed.
+        print(form.errors)
+        print('form invalid')
         return HttpResponseRedirect('/')
 
 
