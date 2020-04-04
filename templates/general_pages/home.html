@@ -2,12 +2,13 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
- {% block seo_stuff %}
+{% block header_stuff %}
     <title>Small Business AWS consultant and Support | RoboNimbus</title>
     <meta name="description" content="Using AWS I help small businesses save money by helping manage their
     cloud environments, train owners and employees, review architecture, find security vulnerabilities, build software, and manage web services and
     a price that fits their budget.">
-
+{% endblock %}
+ {% block seo_stuff %}
     <meta property="og:title" content="Small Business AWS DevOps consultant and support" />
     <meta property="og:url" content="{{ request.build_absolute_uri }}" />
     <meta property="og:image" content="https://{% static 'img/portfolio/robonimbus.png' %}" />
@@ -16,7 +17,7 @@
     a price that fits their budget.">
 
     <meta property="og:type" content="website" />
-    <script type="application/ld+json">
+    <script async type="application/ld+json">
     {
        "@context": "http://schema.org",
        "@type": "Organization",
@@ -183,7 +184,7 @@
                 <i class="fa fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="{% static 'img/portfolio/Tourzan.png'%}" alt="thumbail" name="dimg">
+            <img class="img-fluid" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{% static 'img/portfolio/Tourzan.png'%}" alt="thumbail" name="dimg">
           </a>
           <div class="portfolio-caption">
             <h4>Tourzan.com</h4>
@@ -197,7 +198,7 @@
                 <i class="fa fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="{% static 'img/portfolio/Metrolla.png'%}" alt="thumbail2" name="dimg">
+            <img class="img-fluid" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{% static 'img/portfolio/Metrolla.png'%}" alt="thumbail2" name="dimg">
           </a>
           <div class="portfolio-caption">
             <h4>Metrolla.com</h4>
@@ -212,7 +213,7 @@
                 <i class="fa fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="{% static 'img/portfolio/robonimbus.png'%}" alt="thumbail3" name="dimg">
+            <img class="img-fluid" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{% static 'img/portfolio/robonimbus.png'%}" alt="thumbail3" name="dimg">
           </a>
           <div class="portfolio-caption">
             <h4>RoboNimbus.com</h4>
@@ -229,7 +230,7 @@
                 <i class="fa fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="{% static 'img/portfolio/stratus10.png'%}" alt="thumbail4" name="dimg">
+            <img class="img-fluid" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{% static 'img/portfolio/stratus10.png'%}" alt="thumbail4" name="dimg">
           </a>
           <div class="portfolio-caption">
             <h4>Stratus10.com</h4>
@@ -243,7 +244,7 @@
                 <i class="fa fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="{% static 'img/portfolio/saepio.png'%}" alt="thumbail5" name="dimg">
+            <img class="img-fluid" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{% static 'img/portfolio/saepio.png'%}" alt="thumbail5" name="dimg">
           </a>
           <div class="portfolio-caption">
             <h4>Saep.io</h4>
@@ -263,7 +264,7 @@
                 <i class="fa fa-link fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="{% static 'img/portfolio/github.png' %}" alt="thumbail5" name="dimg">
+            <img class="img-fluid" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{% static 'img/portfolio/github.png' %}" alt="thumbail5" name="dimg">
           </a>
           <div class="portfolio-caption">
             <h4>My Github Repo</h4>
@@ -290,7 +291,7 @@
           <ul class="timeline">
             <li>
               <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="{%static 'img/about/googlelogo.png'%}" alt="Google G Logo" name="dimg">
+                <img class="rounded-circle img-fluid" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{%static 'img/about/googlelogo.png'%}" alt="Google G Logo" name="dimg">
               </div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
@@ -307,7 +308,7 @@
             </li>
             <li class="timeline-inverted">
               <div class="timeline-image" style="background-color: crimson">
-                <img class="rounded-circle img-fluid" src="{%static 'img/about/F5.png'%}" alt="F5 Networks Logo" name="dimg">
+                <img class="rounded-circle img-fluid" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{%static 'img/about/F5.png'%}" alt="F5 Networks Logo" name="dimg">
               </div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
@@ -327,7 +328,7 @@
             </li>
             <li>
               <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="{% static 'img/about/tourzan.png'%}" alt="Tourzan.com Logo" name="dimg">
+                <img class="rounded-circle img-fluid" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{% static 'img/about/tourzan.png'%}" alt="Tourzan.com Logo" name="dimg">
               </div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
@@ -349,7 +350,7 @@
             </li>
             <li class="timeline-inverted">
               <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="{% static 'img/about/KW.png'%}" alt="PACCAR Logo" name="dimg">
+                <img class="rounded-circle img-fluid" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{% static 'img/about/KW.png'%}" alt="PACCAR Logo" name="dimg">
               </div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
@@ -373,7 +374,7 @@
             </li>
                <li>
               <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="{% static 'img/about/Metrolla.png'%}" alt="Metrolla.com Logo" name="dimg">
+                <img class="rounded-circle img-fluid" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{% static 'img/about/Metrolla.png'%}" alt="Metrolla.com Logo" name="dimg">
               </div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
@@ -396,7 +397,7 @@
             </li>
             <li class="timeline-inverted">
               <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="{% static 'img/about/1.jpg'%}" alt="PACCAR Logo" name="dimg">
+                <img class="rounded-circle img-fluid" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{% static 'img/about/1.jpg'%}" alt="PACCAR Logo" name="dimg">
               </div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
@@ -445,7 +446,7 @@
         </div>
         <div class="col-sm-4">
           <div class="team-member">
-            <img class="mx-auto rounded-circle" src="{% static 'img/team/adam.jpg'%}" alt="Picture Of Adam Szablya" name="dimg">
+            <img class="mx-auto rounded-circle" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{% static 'img/team/adam.jpg'%}" alt="Picture Of Adam Szablya" name="dimg">
             <h4>Adam Szablya</h4>
             <p class="text-muted">The Consultant and DevOps Engineer</p>
             <ul class="list-inline social-buttons">
@@ -483,14 +484,14 @@
           </div>
         <div class="col-md-4 col-sm-8">
           <a href="https://www.stratus10.com" rel="nofollow noopener noreferrer" target="_blank">
-            <img class="img-fluid d-block mx-auto" src="{% static 'img/logos/stratus10_logo.png' %}" alt="stratus10 logo" name="dimg">
+            <img class="img-fluid d-block mx-auto" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{% static 'img/logos/stratus10_logo.png' %}" alt="stratus10 logo" name="dimg">
           </a>
         </div>
 {#          <div class="col-md-1 col-sm-1">#}
 {#          </div>#}
         <div class="col-md-4 col-sm-8">
           <a href="https://www.saep.io" rel="nofollow noopener noreferrer" target="_blank">
-            <img class="img-fluid d-block mx-auto" src="{% static 'img/logos/saep.png' %}" alt="Saepio logo" name="dimg">
+            <img class="img-fluid d-block mx-auto" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{% static 'img/logos/saep.png' %}" alt="Saepio logo" name="dimg">
           </a>
         </div>
       </div>
@@ -511,7 +512,7 @@
         </div>
           <div class="col-md-4 col-sm-8">
           <a href="https://www.stratus10.com" rel="nofollow noopener noreferrer" target="_blank">
-            <img class="img-fluid d-block mx-auto" src="{% static 'img/logos/stratus10_logo.png' %}" alt="stratus10 logo" name="dimg">
+            <img class="img-fluid d-block mx-auto" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{% static 'img/logos/stratus10_logo.png' %}" alt="stratus10 logo" name="dimg">
           </a>
         </div>
         <div class="col-md-4 col-sm-8">
@@ -550,7 +551,7 @@
                 <div class="col-lg-4">
                   <div class="card hover-shadow-lg hover-translate-y-n10">
                     <a href="{% url 'blog_post' blog_post.slug %}">
-                      <img alt="{{ blog_post.title }} image" src="{{ blog_post.image_small.url }}" class="card-img-top" name="dimg">
+                      <img alt="{{ blog_post.title }} image" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{{ blog_post.image_small.url }}" class="card-img-top" name="dimg">
                     </a>
                     <div class="card-body py-5 text-center">
                       <a href="{% url 'blog_post' blog_post.slug %}" class="d-block h5 lh-150">{{ blog_post.title }}</a>
@@ -581,7 +582,7 @@
                 <!-- Project Details Go Here -->
                 <h2 class="text-uppercase">Tourzan.com</h2>
                 <p class="item-intro text-muted">Build a platform that allows locals to make side cash showing people around where they live.</p>
-                <img class="img-fluid d-block mx-auto" src="{% static 'img/portfolio/Tourzan.png' %}" alt="Tourzan.com modal screenshot" name="dimg">
+                <img class="img-fluid d-block mx-auto" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{% static 'img/portfolio/Tourzan.png' %}" alt="Tourzan.com modal screenshot" name="dimg">
                 <p>The website started as a way for me to continue to code while going through a major change in my career.
                 I decided to take my passion for travel and found that there was an entire segment lacking in the
                     tourism industry for Airbnb like services. Tourzan.com filled that need.
@@ -623,7 +624,7 @@
                 <!-- Project Details Go Here -->
                 <h2 class="text-uppercase">Metrolla.com</h2>
                 <p class="item-intro text-muted">Give a voice to autonomous vehicles with existing tech.</p>
-                <img class="img-fluid d-block mx-auto" src="{% static 'img/portfolio/Metrolla.png' %}" alt="Metrolla.com modal screenshot" name="dimg">
+                <img class="img-fluid d-block mx-auto" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{% static 'img/portfolio/Metrolla.png' %}" alt="Metrolla.com modal screenshot" name="dimg">
                 <p>After realizing the lack of communication services within the logistics segment of autonomous vehicles,
                     I decided to challenge myself to build a SaaS for RnD Startups and Customers of Self driving delivery vehicles.
                     The concept was simple, use existing widely implemented technology like sockets, REST API's and
@@ -666,7 +667,7 @@
                 <!-- Project Details Go Here -->
                 <h2 class="text-uppercase">RoboNimbus.com</h2>
                 <p class="item-intro text-muted">Complete personal portfolio website</p>
-                <img class="img-fluid d-block mx-auto" src="{% static 'img/portfolio/robonimbus.png' %}" alt="robonimnus modal screenshot" name="dimg">
+                <img class="img-fluid d-block mx-auto" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{% static 'img/portfolio/robonimbus.png' %}" alt="robonimnus modal screenshot" name="dimg">
                 <p>I decided that after a very long time it was time I made my own personal website to showcase what I
                     have been doing with my skills and career. I build this to serve two purposes, point people to a
                     focused collection of information and to help me bring on new clients in my subcontracting.
@@ -705,7 +706,7 @@
                 <!-- Project Details Go Here -->
                 <h2 class="text-uppercase">Stratus10 website production CICD pipeline</h2>
                 <p class="item-intro text-muted">Tasked with building and managing their production CICD pipelines for their Drupal site.</p>
-                <img class="img-fluid d-block mx-auto" src="{% static 'img/portfolio/stratus10.png' %}" alt="stratus10 modal screenshot" name="dimg">
+                <img class="img-fluid d-block mx-auto" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{% static 'img/portfolio/stratus10.png' %}" alt="stratus10 modal screenshot" name="dimg">
                 <p>Stratus10 is a full service AWS solutions shop for small to medium businesses.
                     Along with subcontracting for them as a client of mine to assist their customers, I was tasked with
                     managing their internal devops services including cloud formation deployments all the way to their
@@ -742,7 +743,7 @@
                 <!-- Project Details Go Here -->
                 <h2 class="text-uppercase">Saep.io Cloud Security Analytics Dashboard</h2>
                 <p class="item-intro text-muted">Build a dashboard that hooks into AWS, Azure and Google Cloud</p>
-                <img class="img-fluid d-block mx-auto" src="{% static 'img/portfolio/saepio.png' %}" alt="saep.io modal screeenshot" name="dimg">
+                <img class="img-fluid d-block mx-auto" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{% static 'img/portfolio/saepio.png' %}" alt="saep.io modal screeenshot" name="dimg">
                 <p>I was contracted to build an Analytics dashboard that allowed the continuous monitoring of security
                     vulnerabilities that Saepio's services remediate. The continuous improvement to the dashboard would
                     eventually allow for automatic remediation with their proprietary software and allow clients to
