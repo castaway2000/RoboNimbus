@@ -43,6 +43,11 @@
     {% endblock seo_stuff %}
 
 {% block content %}
-{{ privacy.text | safe }}
+    <section></section>
+    <div class="container">
+        <div class="row">
+            {{ privacy.text | safe }}
+        </div>
+    </div>
 {% endblock %}
 {#{% include 'footer.html' %}#}

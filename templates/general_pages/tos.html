@@ -44,6 +44,11 @@
     {% endblock seo_stuff %}
 
 {% block content %}
-{{ tos.text | safe }}
+    <section></section>
+    <div class="container">
+        <div class="row">
+            {{ tos.text | safe }}
+        </div>
+    </div>
 {% endblock %}
 {#{% include 'footer.html' %}#}
