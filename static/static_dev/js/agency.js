@@ -29,7 +29,7 @@
   // Collapse Navbar
   var navbarCollapse = function() {
 
-    if(window.location.pathname == '/blog/' || window.location.pathname == '/terms-of-service' || window.location.pathname == '/privacy-policy') {
+    if(window.location.pathname == '/blog' || window.location.pathname == '/terms-of-service' || window.location.pathname == '/privacy-policy') {
       $("#mainNav").addClass("navbar-shrink");
     }
     else{
