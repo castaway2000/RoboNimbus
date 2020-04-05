@@ -1,13 +1,15 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block seo_Stuff %}
+{% block header_stuff %}
     <title>{{ object.title }} | RoboNimbus Blog</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta name="description" content="{{ object.text|safe|truncatechars:160 }}"/>
     <meta name="author" content="RoboNimbus">
+{% endblock %}
 
+{% block seo_Stuff %}
     <meta property="og:title" content="{{ object.title }} | RoboNimbus Blog" />
     <meta property="og:url" content="{{ request.build_absolute_uri }}" />
     <meta property="og:image" content="https://{{ request.get_host }}{% static 'img/portfolio/robonimbus.png' %}" />

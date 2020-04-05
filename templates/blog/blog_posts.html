@@ -1,14 +1,16 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block seo_Stuff %}
+{% block header_stuff %}
     <title>Read up on how we are helping small businesses with AWS. | RoboNimbus</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Read the latest in AWS small business support solutions as I work with small
     businesses to help the msave money and grow their business using cloud services.">
     <meta name="author" content="RoboNimbus">
+{% endblock %}
 
+{% block seo_Stuff %}
     <meta property="og:title" content="Read up on how we are helping small businesses with AWS. | RoboNimbus" />
     <meta property="og:url" content="{{ request.build_absolute_uri }}" />
     <meta property="og:image" content="https://{{ request.get_host }}{% static 'img/portfolio/robonimbus.png' %}" />

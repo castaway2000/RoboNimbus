@@ -24,7 +24,7 @@ sitemaps = {'static': StaticSitemap, 'blogs': BlogSitemap}
 
 urlpatterns = [
 
-    path('admin/', admin.site.urls),
+    path('adminisacloud/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
     path('', include("general_pages.urls")),
     path('', include("blog.urls")),
