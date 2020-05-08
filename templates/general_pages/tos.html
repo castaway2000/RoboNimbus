@@ -2,45 +2,24 @@
 {% load static %}
 {% block header_stuff %}
     <title>RoboNimbus Terms of Service</title>
-    <meta name="description" content="Using AWS I help small businesses save money by helping manage their
-    cloud environments, train owners and employees, review architetcure, find security vilnerabilties, build software, and manage web services and
-    a price that fits their budget.">
+    <meta name="description" content="Find out how easy it is to jump in and start working with us.
+    Our Terms of Service for working with our clients are built in to our website and easily available for you.">
 {% endblock %}
  {% block seo_stuff %}
-    <meta property="og:title" content="Small Business AWS DevOps consultant and support" />
-    <meta property="og:url" content="{{ request.build_absolute_uri }}" />
-    <meta property="og:image" content="{% if request.is_secure %}https://{% else %}http://{% endif %}{{ request.get_host }}{% static 'img/portfolio/robonimbus.png' %}" />
-    <meta property="og:description" content="Using AWS I help small businesses save money by helping manage their
-    cloud environments, train owners and employees, review architetcure, find security vilnerabilties, build software, and manage web services and
-    a price that fits their budget.">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="twitter:image" content="https://{% static 'img/portfolio/robonimbus.png' %}" />
+    <meta name="twitter:card" content="RoboNimbus Terms of Service">
+    <meta name="twitter:title" content="RoboNimbus Terms of Service">
+    <meta name="twitter:description" content="Find out how easy it is to jump in and start working with us.
+    Our Terms of Service for working with our clients are built in to our website and easily available for you.">
 
+    <meta property="og:title" content="RoboNimbus Terms of Service" />
+    <meta property="og:url" content="{{ request.build_absolute_uri }}" />
+    <meta property="og:image" content="https://{% static 'img/portfolio/robonimbus.png' %}" />
+    <meta property="og:description" content="Find out how easy it is to jump in and start working with us.
+    Our Terms of Service for working with our clients are built in to our website and easily available for you.">
     <meta property="og:type" content="website" />
-    <script type="application/ld+json">
-    {
-       "@context": "http://schema.org",
-       "@type": "Organization",
-       "name": "RoboNimbus",
-       "url": "https://www.robonimbus.com/",
-       "logo": "{% if request.is_secure %}https://{% else %}http://{% endif %}{{ request.get_host }}{% static 'img/portfolio/robonimbus.png' %}",
-       "contactPoint": [
-           {
-               "@type": "ContactPoint",
-               "telephone": "+1(844)8433815",
-               "contactType": "sales",
-               "email": "contactus@robonimbus.com",
-               "areaServed": [
-                   "USA"
-               ],
-               "availableLanguage": [
-                   "English"
-               ]
-           }
-       ],
-       "sameAs": [
-           "https://www.linkedin.com/in/adam-szablya-a0b41b8a/",
-       ]
-    }
-    </script>
     {% endblock seo_stuff %}
 
 {% block content %}

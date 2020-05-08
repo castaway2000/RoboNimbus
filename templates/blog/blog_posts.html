@@ -6,17 +6,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Read the latest in AWS small business support solutions as I work with small
-    businesses to help the msave money and grow their business using cloud services.">
+    businesses to help them save money and grow their business using cloud services.">
     <meta name="author" content="RoboNimbus">
 {% endblock %}
 
 {% block seo_Stuff %}
+     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="twitter:image" content="https://{% static 'img/portfolio/robonimbus.png' %}" />
+    <meta name="twitter:card" content="RoboNimbus Blog">
+    <meta name="twitter:title" content="Read up on how we are helping small businesses with AWS. | RoboNimbus">
+    <meta name="twitter:description" content="Read the latest in AWS small business support solutions as I work with small
+    businesses to help them save money and grow their business using cloud services.">
+
     <meta property="og:title" content="Read up on how we are helping small businesses with AWS. | RoboNimbus" />
     <meta property="og:url" content="{{ request.build_absolute_uri }}" />
-    <meta property="og:image" content="https://{{ request.get_host }}{% static 'img/portfolio/robonimbus.png' %}" />
+    <meta property="og:image" content="https://{% static 'img/portfolio/robonimbus.png' %}" />
     <meta property="og:description" content="Read the latest in AWS small business support solutions as I work with small
-    businesses to help the msave money and grow their business using cloud services.">
-    <meta property="og:type" content="website" />
+    businesses to help them save money and grow their business using cloud services.">
+    <meta property="og:type" content="blog" />
 {% endblock %}
 
 {% block content %}

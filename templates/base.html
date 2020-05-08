@@ -6,18 +6,35 @@
 <head>
     {% block header_stuff %}
     {% endblock %}
-    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="twitter:image" content="https://{% static 'img/portfolio/robonimbus.png' %}" />
-    <meta name="twitter:card" content="RoboNimbus">
-    <meta name="twitter:title" content="Small Business AWS DevOps consultant and support">
-    <meta name="twitter:description" content="Using AWS I help small businesses save money by helping manage their
-    cloud environments, review architecture, find security vulnerabilities, build software, and manage web services and
-    a price that fits their budget.">
-{#    <meta name="twitter:site" content="@">#}
 
    {% block seo_Stuff %}
     {% endblock %}
+    <script type="application/ld+json">
+        {
+           "@context": "http://schema.org",
+           "@type": "Organization",
+           "name": "RoboNimbus",
+           "url": "https://www.robonimbus.com/",
+           "logo": "https://{% static 'img/favicon_io/android-chrome-512x512.png' %}",
+           "contactPoint": [
+               {
+                   "@type": "ContactPoint",
+                   "telephone": "+1(844)8433815",
+                   "contactType": "sales",
+                   "email": "contactus@robonimbus.com",
+                   "areaServed": [
+                       "USA"
+                   ],
+                   "availableLanguage": [
+                       "English"
+                   ]
+               }
+           ],
+           "sameAs": [
+               "https://www.linkedin.com/in/adam-szablya-a0b41b8a/",
+           ]
+        }
+    </script>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="{% static 'img/favicon_io/favicon.ico' %}">

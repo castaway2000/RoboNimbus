@@ -2,17 +2,23 @@
 {% load static %}
 {% block header_stuff %}
     <title>Discover how we help protect your privacy and property | RoboNimbus</title>
-    <meta name="description" content="Using AWS I help small businesses save money by helping manage their
-    cloud environments, train owners and employees, review architetcure, find security vilnerabilties, build software, and manage web services and
-    a price that fits their budget.">
+    <meta name="description" content="Explore how we use your information to provide better service to you.
+    Learn more on how our privacy policy works and how we are protecting you and your AWS accounts.">
 {% endblock %}
  {% block seo_stuff %}
-    <meta property="og:title" content="Small Business AWS DevOps consultant and support" />
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="twitter:image" content="https://{% static 'img/portfolio/robonimbus.png' %}" />
+    <meta name="twitter:card" content="RoboNimbus Privacy Policy">
+    <meta name="twitter:title" content="Discover how we help protect your privacy and property. | RoboNimbus">
+    <meta name="twitter:description" content="Explore how we use your information to provide better service to you.
+    Learn more on how our privacy policy works and how we are protecting you and your AWS accounts.">
+
+    <meta property="og:title" content="Discover how we help protect your privacy and property. | RoboNimbus" />
     <meta property="og:url" content="{{ request.build_absolute_uri }}" />
     <meta property="og:image" content="{% if request.is_secure %}https://{% else %}http://{% endif %}{{ request.get_host }}{% static 'img/portfolio/robonimbus.png' %}" />
-    <meta property="og:description" content="Using AWS I help small businesses save money by helping manage their
-    cloud environments, train owners and employees, review architetcure, find security vilnerabilties, build software, and manage web services and
-    a price that fits their budget.">
+    <meta property="og:description" content="Explore how we use your information to provide better service to you.
+    Learn more on how our privacy policy works and how we are protecting you and your AWS accounts.">
 
     <meta property="og:type" content="website" />
     <script type="application/ld+json">

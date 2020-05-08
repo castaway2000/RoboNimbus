@@ -10,11 +10,19 @@
 {% endblock %}
 
 {% block seo_Stuff %}
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="twitter:image" content="{{ object.image_large.url }}" />
+    <meta name="twitter:card" content="{{ object.title }} | RoboNimbus Blog">
+    <meta name="twitter:title" content="{{ object.title }} | RoboNimbus Blog">
+    <meta name="twitter:description" content="{{ object.text|safe|truncatechars:160 }}">
+
+
     <meta property="og:title" content="{{ object.title }} | RoboNimbus Blog" />
     <meta property="og:url" content="{{ request.build_absolute_uri }}" />
     <meta property="og:image" content="{{ object.image_large.url }}" />
     <meta property="og:description" content="{{ object.text|safe|truncatechars:160 }}"/>
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content="blog" />
 {% endblock %}
 
 {% block content %}
