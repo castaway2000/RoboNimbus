@@ -12,7 +12,7 @@
 {% block seo_Stuff %}
     <meta property="og:title" content="{{ object.title }} | RoboNimbus Blog" />
     <meta property="og:url" content="{{ request.build_absolute_uri }}" />
-    <meta property="og:image" content="https://{{ request.get_host }}{% static 'img/portfolio/robonimbus.png' %}" />
+    <meta property="og:image" content="{{ object.image_large.url }}" />
     <meta property="og:description" content="{{ object.text|safe|truncatechars:160 }}"/>
     <meta property="og:type" content="website" />
 {% endblock %}
