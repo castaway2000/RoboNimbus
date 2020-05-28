@@ -51,8 +51,16 @@
                   </a>
                 </div>
                 <div class="col-lg-6 order-lg-1">
-                  <img alt="{{ blog_post.title }} image" src="{{ blog_post.image_medium.url }}"
-                       class="img-fluid rounded shadow-lg hover-translate-y-n3">
+
+                  <img
+                        {% if blog_post.image %}
+                            src="{% get_media_prefix %}{{ blog_post.image }}"
+                        {% else %}
+                            src=""
+                        {% endif %}
+                          alt="{{ blog_post.slug }}" title="{{ blog_post.slug }}"
+                          class="img-fluid rounded shadow-lg hover-translate-y-n3"
+                  />
                 </div>
               </div>
               {% endfor %}
