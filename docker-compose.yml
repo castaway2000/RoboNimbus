@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    command: ./entrypoint.sh
+    container_name: 'django-test'
+    volumes:
+      - .:/dockercode
+    ports:
+      - "8000:8000"
+

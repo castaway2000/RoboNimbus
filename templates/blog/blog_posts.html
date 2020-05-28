@@ -36,7 +36,7 @@
         </div>
       </section>
             <div class="container">
-             {% for blog_post in object_list %}
+             {% for blog_post in blog_posts %}
               <div class="row row-grid align-items-center">
                 <div class="col-lg-5 order-lg-2 ml-lg-auto">
                   <small class="text-muted text-uppercase ls-1">{{ blog_post.created|date:"d M, Y" }}</small>
@@ -56,5 +56,41 @@
                 </div>
               </div>
               {% endfor %}
+            {% if blog_posts.has_other_pages %}
+                    <ul class="pagination">
+                        {% if blog_posts.has_previous %}
+                            <li class="next">
+                               <a href="?page={{ blog_posts.previous_page_number }}"
+                                  class="btn btn-dark btn-icon rounded-pill hover-scale-110" rel="next">
+                                  <span class="btn-inner--text">Previous Page</span>
+                                  <span class="btn-inner--icon">
+                                  </span>
+                               </a>
+                            </li>
+                        {% endif %}
+                        {% for i in page_range %}
+                            {% if blog_posts.number == i %}
+                                    {% if last_in_range == i %}
+                                        <li class="active"><a href="?page={{ i }}" class="btn btn-warning btn-icon rounded-pill" rel="">&nbsp;<strong>{{ i }}</strong>&nbsp;of&nbsp;{{ paginator.num_pages }}</a></li>
+                                    {% else %}
+                                        <li class="active"><a href="?page={{ i }}" class="btn btn-warning btn-icon rounded-circle" rel="">&nbsp;<strong>{{ i }}</strong>&nbsp;</a></li>
+                                    {% endif %}
+                            {% else %}
+                                <li><a href="?page={{ i }} "class="btn btn-dark btn-icon rounded-circle" >&nbsp;{{ i }}&nbsp;</a></li>
+                            {% endif %}
+                        {% endfor %}
+                        {% if blog_posts.has_next %}
+                               <li class="next">
+                                   <a href="?page={{ blog_posts.next_page_number }}"
+                                      class="btn btn-dark btn-icon rounded-pill hover-scale-110" rel="next">
+                                      <span class="btn-inner--text">Next Page&nbsp;of&nbsp;{{ paginator.num_pages }}</span>
+                                      <span class="btn-inner--icon">
+                                      </span>
+                                   </a>
+                               </li>
+                                {% endif %}
+                            </ul>
+                        {% endif %}
+                <div class="gap"></div>
             </div>
 {% endblock content %}
