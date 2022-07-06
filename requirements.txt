@@ -11,7 +11,7 @@ django-sitemaps==1.1.1
 django-summernote==0.8.11.6
 docutils==0.15.2
 jmespath==0.9.5
-lxml==4.6.2
+lxml==4.9.1
 phonenumbers==8.12.1
 Pillow==7.1.0
 python-dateutil==2.8.1
